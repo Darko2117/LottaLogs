@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>LottaLogs</artifactId>
+    <version>1.0</version>
+
+    <properties>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>nexus</id>
+            <url>https://nexus.badbones69.com/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.17.1-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.TechFortress</groupId>
+            <artifactId>GriefPrevention</artifactId>
+            <version>16.17.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.keyle</groupId>
+            <artifactId>mypet</artifactId>
+            <version>3.11-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>me.badbones69</groupId>
+            <artifactId>crazycrates-plugin</artifactId>
+            <version>1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>me.filoghost.farmlimiter.api.FarmLimitEvent</groupId>
+            <artifactId>FarmLimiter</artifactId>
+            <version>1.5.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/FarmLimiter.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+</project>

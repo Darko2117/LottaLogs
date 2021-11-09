@@ -1,0 +1,12 @@
+version: 1.0
+name: LottaLogs
+description: Solves many of your logging needs (potentially)
+author: Daki
+main: com.daki.lottalogs.LottaLogs
+api-version: 1.16
+softdepend: [ CrazyCrates, FarmLimiter, GriefPrevention, MyPet ]
+commands:
+  searchlogs:
+    permission: lottalogs.searchlogs
+  lottalogsreload:
+    permission: lottalogs.reload
