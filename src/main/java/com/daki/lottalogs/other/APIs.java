@@ -17,10 +17,10 @@ public class APIs extends JavaPlugin {
 
     public static void APIConnect() {
 
-        GriefPreventionFound = GriefPreventionApiCheck() != null; //
-        MyPetFound = MyPetApiCheck() != null; //
-        CrazyCratesFound = CrazyCratesApiCheck() != null; //
-        FarmLimiterFound = FarmLimiterApiCheck() != null; //
+        GriefPreventionFound = GriefPreventionApiCheck() != null;
+        MyPetFound = MyPetApiCheck() != null;
+        CrazyCratesFound = CrazyCratesApiCheck() != null;
+        FarmLimiterFound = FarmLimiterApiCheck() != null;
 
         if (GriefPreventionFound)
             LottaLogs.getInstance().getLogger().info(ConsoleColors.BLUE_BRIGHT + "GriefPrevention found!... " + ConsoleColors.RESET);

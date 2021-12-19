@@ -3,7 +3,7 @@ name: LottaLogs
 description: Solves many of your logging needs (potentially)
 author: Daki
 main: com.daki.lottalogs.LottaLogs
-api-version: 1.16
+api-version: 1.18
 softdepend: [ CrazyCrates, FarmLimiter, GriefPrevention, MyPet ]
 commands:
   searchlogs:

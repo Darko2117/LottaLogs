@@ -17,10 +17,22 @@ public class Register {
         HandlerList.unregisterAll(LottaLogs.getInstance());
 
         registerEvents(new LoggingNoAPI());
-        registerEvents(new LoggingCrazyCrates());
-        registerEvents(new LoggingFarmLimiter());
-        registerEvents(new LoggingGriefPrevention());
-        registerEvents(new LoggingMyPet());
+
+        if (APIs.CrazyCratesFound) {
+            registerEvents(new LoggingCrazyCrates());
+        }
+
+        if (APIs.FarmLimiterFound) {
+            registerEvents(new LoggingFarmLimiter());
+        }
+
+        if (APIs.GriefPreventionFound) {
+            registerEvents(new LoggingGriefPrevention());
+        }
+
+        if (APIs.MyPetFound) {
+            registerEvents(new LoggingMyPet());
+        }
 
     }
 
