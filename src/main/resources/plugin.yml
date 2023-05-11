@@ -1,0 +1,12 @@
+main: com.daki.lottalogs.LottaLogs
+name: LottaLogs
+version: 1.0
+description: TODO
+author: Daki
+api-version: 1.19
+softdepend: [CrazyCrates, FarmLimiter, GriefPrevention, MyPet]
+commands:
+  reload:
+    permission: lottalogs.reload
+  searchlogs:
+    permission: lottalogs.searchlogs
