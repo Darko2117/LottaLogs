@@ -125,7 +125,7 @@ Examples:
 * GriefPreventionClaimsResizedLog - claims resized by the GriefPrevention plugin
 * ItemsBrokenLog - items that break due to losing durability
 * ItemsDespawnedLog - dropped items that despawn
-* ItemsDestroyedLog - dropped items that get destroyed. NOTE: This log is not 100% accurate, it needs to log when a dropped item takes damage and they can take damage up to 6 or so times before being destroyed. Items being destroyed by a cactus go under the “CONTACT” cause. Items destroyed by the void are not logged.
+* ItemsDestroyedLog - dropped items that get destroyed, items destroyed by the void are not logged
 * ItemsPlacedInItemFramesLog - items placed in item frames
 * ItemsTakenOutOfItemFramesLog - items taken out of item frames
 * LightningStrikesLog - lightning strikes
