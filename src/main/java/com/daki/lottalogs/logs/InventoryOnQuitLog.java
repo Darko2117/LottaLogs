@@ -31,7 +31,9 @@ public class InventoryOnQuitLog extends Log implements Listener {
         PlayerInventory playerInventory = event.getPlayer().getInventory();
         List<String> items = new ArrayList<>();
         for (int i = 0; i <= 40; i++) {
-            items.add(playerInventory.getItem(i).toString());
+            if (playerInventory.getItem(i) != null) {
+                items.add(playerInventory.getItem(i).toString());
+            }
         }
         if (items.isEmpty()) {
             items.add("-");
