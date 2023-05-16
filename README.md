@@ -123,6 +123,8 @@ Examples:
 * GriefPreventionClaimsDeletedLog - claims deleted by the GriefPrevention plugin
 * GriefPreventionClaimsExpiredLog - claims modified by the GriefPrevention plugin
 * GriefPreventionClaimsResizedLog - claims resized by the GriefPrevention plugin
+* InventoryOnJoinLog - items in the player's inventory when they join
+* InventoryOnQuitLog - items in the player's inventory when they quit
 * ItemsBrokenLog - items that break due to losing durability
 * ItemsDespawnedLog - dropped items that despawn
 * ItemsDestroyedLog - dropped items that get destroyed, items destroyed by the void are not logged
