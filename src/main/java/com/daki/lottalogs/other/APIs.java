@@ -42,9 +42,9 @@ public class APIs {
     private static void sendFoundMessage(String pluginName, boolean found) {
 
         if (found) {
-            LottaLogs.getInstance().getLogger().info(ConsoleColors.BLUE_BRIGHT + pluginName + " found!");
+            LottaLogs.getInstance().getLogger().info(ConsoleColors.BLUE_BRIGHT + pluginName + " found!" + ConsoleColors.RESET);
         } else {
-            LottaLogs.getInstance().getLogger().info(ConsoleColors.RED + pluginName + " not found!");
+            LottaLogs.getInstance().getLogger().info(ConsoleColors.RED + pluginName + " not found!" + ConsoleColors.RESET);
         }
 
     }
