@@ -205,7 +205,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                     File file = filesToRead.get(i);
 
                     if (shouldDoBossBar) {
-                        bossBarProgress = (double) i / (double) (filesToRead.size() - 1);
+                        bossBarProgress = (double) i / (double) (filesToRead.size());
                         progressBossBar.setProgress(bossBarProgress);
                         progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "READING FILE: " + file.getName());
                     }
@@ -257,6 +257,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
             }
 
             if (shouldDoBossBar) {
+                progressBossBar.setProgress(1);
                 progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "CLOSING WRITER");
             }
 
@@ -546,7 +547,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                     File file = filesToRead.get(i);
 
                     if (shouldDoBossBar) {
-                        bossBarProgress = (double) i / (double) (filesToRead.size() - 1);
+                        bossBarProgress = (double) i / (double) (filesToRead.size());
                         progressBossBar.setProgress(bossBarProgress);
                         progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "READING FILE: " + file.getName());
                     }
@@ -686,6 +687,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
             }
 
             if (shouldDoBossBar) {
+                progressBossBar.setProgress(1);
                 progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "CLOSING WRITER");
             }
 
@@ -927,7 +929,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                     File file = filesToRead.get(i);
 
                     if (shouldDoBossBar) {
-                        bossBarProgress = (double) i / (double) (filesToRead.size() - 1);
+                        bossBarProgress = (double) i / (double) (filesToRead.size());
                         progressBossBar.setProgress(bossBarProgress);
                         progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "READING FILE: " + file.getName());
                     }
@@ -972,6 +974,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
             }
 
             if (shouldDoBossBar) {
+                progressBossBar.setProgress(1);
                 progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "CLOSING WRITER");
             }
 
