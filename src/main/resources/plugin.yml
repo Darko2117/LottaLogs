@@ -1,9 +1,9 @@
 main: com.daki.lottalogs.LottaLogs
 name: LottaLogs
-version: 1.04
+version: 1.05
 description: A moderation tool designed to keep track of dozens of actions that happen on the server as well as to offer users easy access to this and any other log related data.
 author: Daki
-api-version: 1.19
+api-version: 1.20
 softdepend: [CrazyCrates, FarmLimiter, GriefPrevention, MyPet]
 commands:
   reload:
