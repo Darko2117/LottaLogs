@@ -5,7 +5,7 @@
 
 LottaLogs is a moderation tool designed to keep track of dozens of actions that happen on the server as well as to offer users easy access to this and any other log related data.  
 This plugin was originally made for the [Altitude](https://alttd.com/) server and it was meant to be used along with [CoreProtect](https://github.com/PlayPro/CoreProtect). It doesn't provide some things that CoreProtect provides (like blocks placed/broken, entities killed, etc.) and the logs are specific to what Altitude needed. Getting CoreProtect is strongly suggested as it is an amazingly useful moderation tool.  
-If you require any changes/additions to the plugin contact me at `Daki#6572` on Discord.
+If you require any changes/additions to the plugin contact me at `daki2117` on Discord.
 
 * [Features](#features)
 * [For Users](#for-users)
