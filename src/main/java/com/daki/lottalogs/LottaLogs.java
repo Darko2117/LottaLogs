@@ -4,6 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.daki.lottalogs.other.APIs;
 import com.daki.lottalogs.other.Config;
 import com.daki.lottalogs.other.Logging;
+import com.daki.lottalogs.other.Metrics;
 import com.daki.lottalogs.other.Register;
 
 public class LottaLogs extends JavaPlugin {
@@ -40,6 +41,8 @@ public class LottaLogs extends JavaPlugin {
 
         Register.registerEvents();
         Register.registerCommands();
+
+        new Metrics(this, 19063);
 
         long end = System.currentTimeMillis();
 
