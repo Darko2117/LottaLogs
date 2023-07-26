@@ -17,15 +17,15 @@
   </properties>
 
   <repositories>
-    <repository>
+    <repository>      <!-- spigot -->
       <id>spigot-repo</id>
       <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
-    <repository>
+    <repository>      <!-- farmlimiter -->
       <id>codemc-repo</id>
       <url>https://repo.codemc.io/repository/maven-public/</url>
     </repository>
-    <repository>
+    <repository>      <!-- griefprevention -->
       <id>jitpack.io</id>
       <url>https://jitpack.io</url>
     </repository>
@@ -47,21 +47,21 @@
     <dependency>
       <groupId>com.github.TechFortress</groupId>
       <artifactId>GriefPrevention</artifactId>
-      <version>16.18.1</version>
+      <version>16.18.2-beta1</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>com.badbones69.crazycrates</groupId>
       <artifactId>crazycrates-api</artifactId>
-      <version>1.11.14.3</version>
+      <version>1.11.16</version>
       <scope>system</scope>
       <systemPath>${project.basedir}/lib/CrazyCrates.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>de.keyle</groupId>
       <artifactId>MyPet</artifactId>
-      <version>3.12-SNAPSHOT-B1740</version>
+      <version>3.12-SNAPSHOT-B1741</version>
       <scope>system</scope>
       <systemPath>${project.basedir}/lib/MyPet.jar</systemPath>
     </dependency>
