@@ -37,6 +37,8 @@ public class Logging {
 
         cacheLogs();
 
+        checkAndCompress();
+        checkAndDeleteOld();
         createBlankLogFiles(LottaLogs.getInstance().getConfig().getString("Logging.CreatingBlankFiles"));
 
         startDateCheck();
