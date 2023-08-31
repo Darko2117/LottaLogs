@@ -54,7 +54,7 @@
     <dependency>
       <groupId>com.badbones69.crazycrates</groupId>
       <artifactId>crazycrates-api</artifactId>
-      <version>1.11.16</version>
+      <version>1.14</version>
       <scope>system</scope>
       <systemPath>${project.basedir}/lib/CrazyCrates.jar</systemPath>
     </dependency>

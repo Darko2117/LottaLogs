@@ -2,7 +2,7 @@ package com.daki.lottalogs.other;
 
 import java.util.HashMap;
 import org.bukkit.Bukkit;
-import com.badbones69.crazycrates.CrazyCrates;
+import com.badbones69.crazycrates.paper.CrazyCrates;
 import com.daki.lottalogs.LottaLogs;
 import de.Keyle.MyPet.MyPetPlugin;
 import lombok.Getter;
@@ -24,19 +24,61 @@ public class APIs {
 
     public static void connectAPIs() {
 
-        sendFoundMessage("CrazyCrates", (crazyCratesAPI = (CrazyCrates) Bukkit.getServer().getPluginManager().getPlugin("CrazyCrates")) != null);
-        sendFoundMessage("FarmLimiter", (farmLimiterFound = (Bukkit.getServer().getPluginManager().getPlugin("FarmLimiter") != null)));
-        sendFoundMessage("GriefPrevention", (griefPreventionAPI = (GriefPrevention) Bukkit.getServer().getPluginManager().getPlugin("GriefPrevention")) != null);
-        sendFoundMessage("MyPet", (myPetAPI = (MyPetPlugin) Bukkit.getServer().getPluginManager().getPlugin("MyPet")) != null);
-
+        connectCrazyCrates();
+        sendFoundMessage("CrazyCrates", crazyCratesAPI != null);
         foundAPIsForLogs.put("CrazyCratesCratePrizesLog", crazyCratesAPI != null);
+
+        connectFarmLimiter();
+        sendFoundMessage("FarmLimiter", farmLimiterFound);
         foundAPIsForLogs.put("FarmLimiterLog", farmLimiterFound);
+
+        connectGriefPrevention();
+        sendFoundMessage("GriefPrevention", griefPreventionAPI != null);
         foundAPIsForLogs.put("GriefPreventionClaimsCreatedLog", griefPreventionAPI != null);
         foundAPIsForLogs.put("GriefPreventionClaimsDeletedLog", griefPreventionAPI != null);
         foundAPIsForLogs.put("GriefPreventionClaimsExpiredLog", griefPreventionAPI != null);
         foundAPIsForLogs.put("GriefPreventionClaimsResizedLog", griefPreventionAPI != null);
+
+        connectMyPet();
+        sendFoundMessage("MyPet", myPetAPI != null);
         foundAPIsForLogs.put("MyPetItemPickupLog", myPetAPI != null);
 
+    }
+
+    private static void connectCrazyCrates() {
+        try {
+
+            crazyCratesAPI = (CrazyCrates) Bukkit.getServer().getPluginManager().getPlugin("CrazyCrates");
+
+        } catch (Throwable ignored) {
+        }
+    }
+
+    private static void connectFarmLimiter() {
+        try {
+
+            farmLimiterFound = (Bukkit.getServer().getPluginManager().getPlugin("FarmLimiter") != null);
+
+        } catch (Throwable ignored) {
+        }
+    }
+
+    private static void connectGriefPrevention() {
+        try {
+
+            griefPreventionAPI = (GriefPrevention) Bukkit.getServer().getPluginManager().getPlugin("GriefPrevention");
+
+        } catch (Throwable ignored) {
+        }
+    }
+
+    private static void connectMyPet() {
+        try {
+
+            myPetAPI = (MyPetPlugin) Bukkit.getServer().getPluginManager().getPlugin("MyPet");
+
+        } catch (Throwable ignored) {
+        }
     }
 
     private static void sendFoundMessage(String pluginName, boolean found) {

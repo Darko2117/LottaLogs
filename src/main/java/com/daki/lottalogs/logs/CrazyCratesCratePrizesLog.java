@@ -6,8 +6,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
-import com.badbones69.crazycrates.api.events.PlayerPrizeEvent;
-import com.badbones69.crazycrates.api.objects.ItemBuilder;
+import com.badbones69.crazycrates.paper.api.events.PlayerPrizeEvent;
+import com.badbones69.crazycrates.paper.api.objects.ItemBuilder;
 import com.daki.lottalogs.other.Logging;
 
 public class CrazyCratesCratePrizesLog extends Log implements Listener {
