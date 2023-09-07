@@ -237,7 +237,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                             continue lineReader;
 
                         for (String blacklistedString : blacklistedStrings) {
-                            if (line.toLowerCase().contains(blacklistedString)) {
+                            if (line.toLowerCase().matches("(.*)" + blacklistedString + "(.*)")) {
                                 writer.write(file.getName() + ":" + "This line contained a blacklisted string. Skipping it." + "\n");
                                 continue lineReader;
                             }
