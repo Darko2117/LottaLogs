@@ -87,6 +87,16 @@ public class Config {
             notFoundInConfigMessage("SearchLogs.NormalSearchBlacklistedStrings");
         }
 
+        if (!config.contains("SearchLogs.ProgressTextColor")) {
+            config.set("SearchLogs.ProgressTextColor", "GOLD");
+            notFoundInConfigMessage("SearchLogs.ProgressTextColor");
+        }
+
+        if (!config.contains("SearchLogs.ProgressBarColor")) {
+            config.set("SearchLogs.ProgressBarColor", "YELLOW");
+            notFoundInConfigMessage("SearchLogs.ProgressBarColor");
+        }
+
         // ----------------------------------------------------------------------------------------------------
 
         // AdditionalLogs

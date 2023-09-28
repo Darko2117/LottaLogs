@@ -47,6 +47,8 @@ Other config options:
 * SearchLogs.FileSizeUploadLimitMB (integer) - Number of megabytes that a result file can be before it gets compressed. If the compressed file is above the limit it won't be sent to Discord
 * SearchLogs.DiscordChannelWebhook (string) - Webhook URL of the Discord channel in which you want the result files to be sent. To create it press Edit Channel -> Integrations -> Create Webhook -> Copy Webhook URL
 * SearchLogs.NormalSearchBlacklistedStrings (list of strings) - If any of the provided strings appear in a line that is being read by the normal search, the line won't be saved to the result.
+* SearchLogs.ProgressTextColor (any [ChatColor](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html)) - Color of the search progress bar text
+* SearchLogs.ProgressBarColor (any [BarColor](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarColor.html)) - Color of the search progress bar
 * AdditionalLogs (Name: string Path: string) - any other logs that you want the plugin to have access to through /searchlogs additional. These log's names need to start with the date (yyyy-mm-dd)
 
 ## Permissions

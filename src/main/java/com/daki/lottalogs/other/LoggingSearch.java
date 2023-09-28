@@ -84,7 +84,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
         temporaryFilesDirectory.mkdir();
 
         boolean shouldDoBossBar = (sender instanceof Player);
-        BossBar progressBossBar = Bukkit.createBossBar(ChatColor.GOLD + "" + ChatColor.BOLD + "STARTING SEARCH", BarColor.YELLOW, BarStyle.SEGMENTED_10);
+        BossBar progressBossBar = Bukkit.createBossBar(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "STARTING SEARCH", BarColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressBarColor").toUpperCase()), BarStyle.SEGMENTED_10);
         double bossBarProgress = 0;
         if (shouldDoBossBar) {
             progressBossBar.setProgress(bossBarProgress);
@@ -207,7 +207,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                     if (shouldDoBossBar) {
                         bossBarProgress = (double) i / (double) (filesToRead.size());
                         progressBossBar.setProgress(bossBarProgress);
-                        progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "READING FILE: " + file.getName());
+                        progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "READING FILE: " + file.getName());
                     }
 
                     if (file.getName().contains(".gz")) {
@@ -258,7 +258,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
 
             if (shouldDoBossBar) {
                 progressBossBar.setProgress(1);
-                progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "CLOSING WRITER");
+                progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "CLOSING WRITER");
             }
 
             try {
@@ -274,7 +274,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                 try {
 
                     if (shouldDoBossBar) {
-                        progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "COMPRESSING RESULT");
+                        progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "COMPRESSING RESULT");
                     }
 
                     Methods.compressFile(outputFile.getAbsolutePath(), outputFile.getAbsolutePath().concat(".gz"));
@@ -295,7 +295,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                 try {
 
                     if (shouldDoBossBar) {
-                        progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "MOVING RESULT");
+                        progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "MOVING RESULT");
                     }
 
                     Methods.copyPasteFile(outputFile, (new File(tempOutputFilePathString)));
@@ -315,7 +315,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                             } else if (webhookURL != null && !webhookURL.equals("https://discord.com/api/webhooks/0123456789123456789/So2Me5Ra0Nd4Om2To4Ke5N")) {
 
                                 if (shouldDoBossBar) {
-                                    progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "SENDING RESULT TO DISCORD");
+                                    progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "SENDING RESULT TO DISCORD");
                                 }
 
                                 new OkHttpClient().newCall(new Request.Builder().url(webhookURL).post(new MultipartBody.Builder().setType(MultipartBody.FORM).addFormDataPart("file", outputFile.getName(), RequestBody.create(outputFile, MediaType.parse("application/octet-stream"))).build()).build()).execute().close();;
@@ -360,7 +360,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
         temporaryFilesDirectory.mkdir();
 
         boolean shouldDoBossBar = (sender instanceof Player);
-        BossBar progressBossBar = Bukkit.createBossBar(ChatColor.GOLD + "" + ChatColor.BOLD + "STARTING SEARCH", BarColor.YELLOW, BarStyle.SEGMENTED_10);
+        BossBar progressBossBar = Bukkit.createBossBar(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "STARTING SEARCH", BarColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressBarColor").toUpperCase()), BarStyle.SEGMENTED_10);
         double bossBarProgress = 0;
         if (shouldDoBossBar) {
             progressBossBar.setProgress(bossBarProgress);
@@ -549,7 +549,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                     if (shouldDoBossBar) {
                         bossBarProgress = (double) i / (double) (filesToRead.size());
                         progressBossBar.setProgress(bossBarProgress);
-                        progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "READING FILE: " + file.getName());
+                        progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "READING FILE: " + file.getName());
                     }
 
                     if (file.getName().contains(".gz")) {
@@ -688,7 +688,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
 
             if (shouldDoBossBar) {
                 progressBossBar.setProgress(1);
-                progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "CLOSING WRITER");
+                progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "CLOSING WRITER");
             }
 
             try {
@@ -704,7 +704,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                 try {
 
                     if (shouldDoBossBar) {
-                        progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "COMPRESSING RESULT");
+                        progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "COMPRESSING RESULT");
                     }
 
                     Methods.compressFile(outputFile.getAbsolutePath(), outputFile.getAbsolutePath().concat(".gz"));
@@ -725,7 +725,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                 try {
 
                     if (shouldDoBossBar) {
-                        progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "MOVING RESULT");
+                        progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "MOVING RESULT");
                     }
 
                     Methods.copyPasteFile(outputFile, (new File(tempOutputFilePathString)));
@@ -745,7 +745,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                             } else if (webhookURL != null && !webhookURL.equals("https://discord.com/api/webhooks/0123456789123456789/So2Me5Ra0Nd4Om2To4Ke5N")) {
 
                                 if (shouldDoBossBar) {
-                                    progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "SENDING RESULT TO DISCORD");
+                                    progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "SENDING RESULT TO DISCORD");
                                 }
 
                                 new OkHttpClient().newCall(new Request.Builder().url(webhookURL).post(new MultipartBody.Builder().setType(MultipartBody.FORM).addFormDataPart("file", outputFile.getName(), RequestBody.create(outputFile, MediaType.parse("application/octet-stream"))).build()).build()).execute().close();;
@@ -790,7 +790,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
         temporaryFilesDirectory.mkdir();
 
         boolean shouldDoBossBar = (sender instanceof Player);
-        BossBar progressBossBar = Bukkit.createBossBar(ChatColor.GOLD + "" + ChatColor.BOLD + "STARTING SEARCH", BarColor.YELLOW, BarStyle.SEGMENTED_10);
+        BossBar progressBossBar = Bukkit.createBossBar(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "STARTING SEARCH", BarColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressBarColor").toUpperCase()), BarStyle.SEGMENTED_10);
         double bossBarProgress = 0;
         if (shouldDoBossBar) {
             progressBossBar.setProgress(bossBarProgress);
@@ -931,7 +931,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                     if (shouldDoBossBar) {
                         bossBarProgress = (double) i / (double) (filesToRead.size());
                         progressBossBar.setProgress(bossBarProgress);
-                        progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "READING FILE: " + file.getName());
+                        progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "READING FILE: " + file.getName());
                     }
 
                     if (file.getName().contains(".gz")) {
@@ -975,7 +975,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
 
             if (shouldDoBossBar) {
                 progressBossBar.setProgress(1);
-                progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "CLOSING WRITER");
+                progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "CLOSING WRITER");
             }
 
             try {
@@ -991,7 +991,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                 try {
 
                     if (shouldDoBossBar) {
-                        progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "COMPRESSING RESULT");
+                        progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "COMPRESSING RESULT");
                     }
 
                     Methods.compressFile(outputFile.getAbsolutePath(), outputFile.getAbsolutePath().concat(".gz"));
@@ -1012,7 +1012,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                 try {
 
                     if (shouldDoBossBar) {
-                        progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "MOVING RESULT");
+                        progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "MOVING RESULT");
                     }
 
                     Methods.copyPasteFile(outputFile, (new File(tempOutputFilePathString)));
@@ -1032,7 +1032,7 @@ public class LoggingSearch implements CommandExecutor, TabCompleter {
                             } else if (webhookURL != null && !webhookURL.equals("https://discord.com/api/webhooks/0123456789123456789/So2Me5Ra0Nd4Om2To4Ke5N")) {
 
                                 if (shouldDoBossBar) {
-                                    progressBossBar.setTitle(ChatColor.GOLD + "" + ChatColor.BOLD + "SENDING RESULT TO DISCORD");
+                                    progressBossBar.setTitle(ChatColor.valueOf(LottaLogs.getInstance().getConfig().getString("SearchLogs.ProgressTextColor").toUpperCase()) + "" + ChatColor.BOLD + "SENDING RESULT TO DISCORD");
                                 }
 
                                 new OkHttpClient().newCall(new Request.Builder().url(webhookURL).post(new MultipartBody.Builder().setType(MultipartBody.FORM).addFormDataPart("file", outputFile.getName(), RequestBody.create(outputFile, MediaType.parse("application/octet-stream"))).build()).build()).execute().close();;
